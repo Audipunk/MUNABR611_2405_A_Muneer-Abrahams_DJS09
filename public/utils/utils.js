@@ -2,11 +2,11 @@ import { Loyalty, Permissions } from "./enums.js";
 import { Review } from "./interfaces.js";
 
 const returningUserDisplay = document.querySelector(
-  "#returning-user"
-) as HTMLSpanElement;
+  "#returning-user") as HtmlSpanElement;
+  {
 const reviewTotalDisplay = document.querySelector(
   "#reviews"
-) as HTMLHeadingElement;
+) as HTMLHeadingElement};
 const firstNameDisplay = document.querySelector("#user") as HTMLSpanElement;
 
 function populateUser(isReturning: boolean, firstName: string) {
