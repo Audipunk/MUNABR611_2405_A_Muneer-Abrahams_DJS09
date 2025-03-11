@@ -6,9 +6,23 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook-generate": "sb-rn-get-stories"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@gorhom/bottom-sheet": "^5.1.2",
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-native-community/datetimepicker": "^8.3.0",
+    "@react-native-community/slider": "^4.5.6",
+    "@storybook/addon-ondevice-actions": "^8.5.5",
+    "@storybook/addon-ondevice-controls": "^8.5.5",
+    "@storybook/react-native": "^8.5.5",
+    "babel-loader": "^8.4.1",
+    "react-native-gesture-handler": "^2.24.0",
+    "react-native-reanimated": "^3.17.1",
+    "react-native-safe-area-context": "^5.3.0",
+    "react-native-svg": "^15.11.2",
     "typescript": "~5.7.2",
     "vite": "^6.1.0"
   },
