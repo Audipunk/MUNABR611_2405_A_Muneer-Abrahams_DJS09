@@ -1,12 +1,16 @@
-import { StorybookConfig } from '@storybook/react-native';
+
+
+
+
+
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { } from './components/App';
-import './index.css'
+import App from './components/App'; // ✅ Fixed import
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
-  <App />
+    <App />
   </StrictMode>
 );
 
