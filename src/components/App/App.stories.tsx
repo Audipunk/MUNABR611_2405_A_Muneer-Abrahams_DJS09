@@ -1,5 +1,5 @@
 
-import { App } from <./App>
+import { App } from <./App>;
 
 const meta = {
     title: "components/App",
