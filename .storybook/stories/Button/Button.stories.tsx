@@ -1,33 +1,21 @@
-import { View } from 'react-native';
-import type { Meta, StoryObj } from '@storybook/react';
-import { MyButton } from './Button';
+// button.component.tsx
 
-const meta = {
-  title: 'MyButton',
-  component: MyButton,
-  argTypes: {
-    onPress: { action: 'pressed the button' },
-  },
-  args: {
-    text: 'Hello world',
-  },
-  decorators: [
-    (Story) => (
-      <View style={{ padding: 16, alignItems: 'flex-start' }}>
-        <Story />
-      </View>
-    ),
-  ],
-} satisfies Meta<typeof MyButton>;
+import React from 'react';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+} from '@mui/material';
 
-export default meta;
+// Only include variant, size, and color
+type ButtonBaseProps = Pick<MuiButtonProps, 'variant' | 'size' | 'color'>;
 
-type Story = StoryObj<typeof meta>;
+// Use all except disableRipple
+// type ButtonBaseProps = Omit<MuiButtonProps, "disableRipple">;
 
-export const Basic: Story = {};
+export interface ButtonProps extends ButtonBaseProps {
+  label: string;
+}
 
-export const AnotherExample: Story = {
-  args: {
-    text: 'Another example',
-  },
-};
+export const Button = ({ label, ...rest }: ButtonProps) => (
+  <MuiButton {...rest}>{label}</MuiButton>
+);
